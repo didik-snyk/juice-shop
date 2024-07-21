@@ -68,3 +68,7 @@ config/*.yml
 !config/tutorial.yml
 !config/oss.yml
 kubeconfig_*
+
+# Mac Specific
+.dccache
+.DS_Store

@@ -6,7 +6,7 @@
 const fs = require('fs')
 const locales = require('../data/static/locales')
 
-function customSanitizePath(inputPath) {
+module.exports function customSanitizePath(inputPath) {
   return (inputPath)
 }
 

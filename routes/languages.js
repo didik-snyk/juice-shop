@@ -26,7 +26,7 @@ module.exports = function getLanguageList () { // TODO Refactor and extend to al
           next(new Error(`Unable to read i18n directory: ${err.message}`))
         }
         languageFiles.forEach((fileName) => {
-          cleanedPath = customSanitizePath('frontend/dist/frontend/assets/i18n/' + fileName)
+          const cleanedPath = customSanitizePath('frontend/dist/frontend/assets/i18n/' + fileName)
           // fs.readFile('frontend/dist/frontend/assets/i18n/' + fileName, 'utf-8', async (err, content) => {
             fs.readFile(cleanedPath, 'utf-8', async (err, content) => {
             if (err) {

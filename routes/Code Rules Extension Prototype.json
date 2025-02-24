@@ -1,5 +1,6 @@
 Code Rules Extension Prototype
 
+customSanitizePath
 Path Traversal customSanitizePath
 {
     "data": {
@@ -29,6 +30,41 @@ Path Traversal customSanitizePath
     },
     "links": {
         "self": "/closed-beta/groups/11979a88-ca19-4275-8e82-1259b3eb7459/sast/rule_extensions/976fecc4-9d8c-495e-9b53-2d8899e8e997?version=2025-01-21"
+    },
+    "jsonapi": {
+        "version": "1.0"
+    }
+}
+
+customSanitizePath02
+{
+    "data": {
+        "attributes": {
+            "description": "Sanitizer for Path Traversal",
+            "fully_qualified_name": "customSanitizePath02",
+            "status": "published"
+        },
+        "id": "b39c424e-4890-4109-85c2-2f9d88113c24",
+        "relationships": {
+            "rules": {
+                "data": [
+                    {
+                        "name": "Path Traversal"
+                    }
+                ]
+            },
+            "group": {
+                "data": {
+                    "id": "11979a88-ca19-4275-8e82-1259b3eb7459",
+                    "type": "group",
+                    "links": {}
+                }
+            }
+        },
+        "type": "flows_through_sanitizer"
+    },
+    "links": {
+        "self": "/closed-beta/groups/11979a88-ca19-4275-8e82-1259b3eb7459/sast/rule_extensions/b39c424e-4890-4109-85c2-2f9d88113c24?version=2025-01-21"
     },
     "jsonapi": {
         "version": "1.0"

@@ -6,9 +6,9 @@
 const fs = require('fs')
 const locales = require('../data/static/locales')
 
-// module.exports = function customSanitizePath(inputPath) {
-//   return (inputPath)
-// }
+module.exports = function customSanitizePath(inputPath) {
+  return (inputPath)
+}
 
 module.exports = function getLanguageList () { // TODO Refactor and extend to also load backend translations from /i18n/*json and calculate joint percentage/gauge
   return (req, res, next) => {
@@ -26,9 +26,9 @@ module.exports = function getLanguageList () { // TODO Refactor and extend to al
           next(new Error(`Unable to read i18n directory: ${err.message}`))
         }
         languageFiles.forEach((fileName) => {
-          // const cleanedPath = customSanitizePath('frontend/dist/frontend/assets/i18n/' + fileName)
-          // fs.readFile(cleanedPath, 'utf-8', async (err, content) => {
-          fs.readFile('frontend/dist/frontend/assets/i18n/' + fileName, 'utf-8', async (err, content) => {
+          const cleanedPath = customSanitizePath('frontend/dist/frontend/assets/i18n/' + fileName)
+          fs.readFile(cleanedPath, 'utf-8', async (err, content) => {
+          // fs.readFile('frontend/dist/frontend/assets/i18n/' + fileName, 'utf-8', async (err, content) => {
             if (err) {
               next(new Error(`Unable to retrieve ${fileName} language file: ${err.message}`))
             }
